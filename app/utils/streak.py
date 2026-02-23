@@ -1,6 +1,7 @@
 from datetime import datetime, timedelta
+from typing import List
 
-def calculate_streak(dates: list[str]) -> int:
+def calculate_streak(dates: List[str]) -> int:
     if not dates:
         return 0
 

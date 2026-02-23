@@ -1,10 +1,9 @@
 from datetime import datetime
-from app.repos.habit_repo import habit_repository as repo
-from app.repos.habit_log_repo import habit_log_repository as log_repo
+from app.repos import habit_repo as repo
+from app.repos import habit_log_repo as log_repo
 from app.utils.streak import calculate_streak
 
 USER_ID = "demo_user"
-
 
 def create_habit_service(data: dict):
     new_id = repo.get_next_habit_id()
@@ -18,6 +17,7 @@ def create_habit_service(data: dict):
     }
 
     repo.insert_habit(habit)
+    log_repo.insert_log(data)
     return new_id
 
 

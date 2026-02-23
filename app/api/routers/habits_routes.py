@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from app.schemas.habit_schema import HabitCreate
 from app.schemas.habit_schema import HabitLogCreate
-from app.utils import habit_service as service
+from app.utils import habits_service as service
 
 router = APIRouter(prefix="/habits", tags=["Habits"])
 
