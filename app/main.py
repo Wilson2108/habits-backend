@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from app.core.database import ping_db
 from app.api.routers import habits_routes
 
-app = FastAPI(title="Habit Tracker API")
+app = FastAPI(title="Habits")
 
 
 @app.on_event("startup")
